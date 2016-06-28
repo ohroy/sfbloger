@@ -22,5 +22,5 @@ function entry() {
 
 
 function clear() {
-    user.logout()
+    user.logout();
 }
