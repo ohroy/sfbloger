@@ -5,7 +5,7 @@ var obj_tag = require('./tag.json')
 
 
 function tag(str) {
-    var ret = ''; //windows
+    var ret = '';
     if (typeof str !== 'string') throw new TypeError('str must be a string!');
     for (var p in obj_tag) {
 
@@ -21,13 +21,13 @@ function tag(str) {
 }
 
 function tags(strs) {
-    var tagIds = ['1040000000089709'];
+    var tagIds = ['1040000000493572']; //other
     for (var i in strs) {
-        var tmpStr = tag(strs[i]);
-        if (tmpStr = 'nodejs') {
+        let tmpStr = strs[i];
+        if (tmpStr == 'nodejs') {
             tmpStr = 'node.js';
         }
-        var tmpId = tmpStr;
+        var tmpId = tag(tmpStr);
         if (tagIds.indexOf(tmpId) == -1 && tmpId != '') {
             tagIds.push(tmpId);
         }
