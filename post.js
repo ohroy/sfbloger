@@ -19,7 +19,7 @@ function _parsePost(post_str) {
         title: objPost.title,
         //过滤所有html标签
         content: objPost._content.replace(/<[^>]+>/g, ""),
-        tag: objPost.tag //category
+        tag: objPost.tags||objPost.tag //category
     }
 }
 
